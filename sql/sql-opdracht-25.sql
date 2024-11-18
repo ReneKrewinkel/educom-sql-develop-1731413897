@@ -5,6 +5,14 @@
 
 SELECT products.SupplierID, ProductName, CompanyName 
 FROM products 
-INNER JOIN suppliers 
+LEFT JOIN suppliers 
 ON products.SupplierID = suppliers.SupplierID 
-ORDER BY products.SupplierID ASC;
+
+UNION
+
+SELECT products.SupplierID, ProductName, CompanyName 
+FROM products
+RIGHT JOIN suppliers
+ON products.SupplierID = suppliers.SupplierID
+
+ORDER BY SupplierID ASC;

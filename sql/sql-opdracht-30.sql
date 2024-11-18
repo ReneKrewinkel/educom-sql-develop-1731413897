@@ -10,3 +10,8 @@
 -- Robert King can be reached at x465
 -- Laura Callahan can be reached at x2344
 -- Anne Dodsworth can be reached at x452
+
+SELECT CONCAT (FirstName, " ", LastName, "can be reached at x", Extension)
+AS Contactinfo
+FROM employees
+ORDER BY EmployeeID
