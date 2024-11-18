@@ -16,3 +16,8 @@
 -- Queso Manchego La Pastora weighs/is 10 - 500 g pkgs and cost $38
 -- Konbu weighs/is 2 kg box and cost $6
 -- It should return 77 rows
+
+SELECT CONCAT(productName, " weight/is ", QuantityPerUnit, " and costs $", ROUND(UnitPrice)) as "ProductInfo"
+FROM products
+
+
